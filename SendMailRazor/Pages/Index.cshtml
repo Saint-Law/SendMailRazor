@@ -1,0 +1,30 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Send Email with Asp.net Core with Razor Pages</h1>
+    <hr />  
+    <form method="post">
+        <table>
+            <tr>
+                <td>To</td>
+                <td><input type="text" asp-for="SendMail.To" placeholder="Enter Email Id..." /></td>
+            </tr>
+            <tr>
+                <td>Subject</td>
+                <td><input type="text" asp-for="SendMail.Subject" placeholder="Enter Subject..." /></td>
+            </tr>
+            <tr>
+                <td>To</td>
+                <td><textarea asp-for="SendMail.Body" cols="25" rows="5" placeholder="Enter Text Here.."></textarea></td>
+            </tr>
+            <tr>
+                <td><input type="submit" class="btn-success" value="Send Mail..." /></td>
+                <td>@ViewData["Message"]</td>
+            </tr>
+        </table>
+    </form>
+</div>
